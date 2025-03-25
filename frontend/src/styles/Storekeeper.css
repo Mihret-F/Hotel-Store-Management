@@ -1,0 +1,86 @@
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181717; /* Fallback background */
+  }
+  
+  /* Authentication box */
+  .authBox {
+    background-color: rgba(5, 5, 5, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button container */
+  .buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Buttons */
+  .button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 160px;
+    transition: all 0.3s ease;
+  }
+  
+  .buttonSuccess {
+    background-color: #c8f1d2;
+    color: #181717;
+  }
+  
+  .buttonInfo {
+    background-color: #d9e8eb;
+    color: #181717;
+  }
+  
+  .buttonPrimary {
+    background-color: #b6d0ec;
+    color: #181717;
+  }
+  
+  .buttonWarning {
+    background-color: #ece6d1;
+    color: black;
+  }
+  
+  .buttonDanger {
+    background-color: #f0838e;
+  }
+  
+  /* Warning text */
+  .warningText {
+    color: rgb(240, 180, 180);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(19, 18, 18);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../Assert/store.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  

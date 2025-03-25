@@ -1,0 +1,121 @@
+.contact {
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #2c2f33; /* Dark background */
+  color: #f6f8fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #3a3f44;
+  color: white;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #88f196;
+  box-shadow: 0 0 8px rgba(136, 241, 150, 0.5);
+}
+
+/* Textarea adjustment */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+button {
+  background-color: #81f591;
+  color: rgb(27, 26, 26);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+  background-color: #eee5e5;
+  transform: scale(1.05);
+  color: #1a1b1b;
+
+}
+
+/* Message feedback styling */
+p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+.contact {
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #2c2f33; /* Dark background */
+  color: #f6f8fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}

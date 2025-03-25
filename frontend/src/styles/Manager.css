@@ -1,0 +1,56 @@
+/* Ensure the container takes full height */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes the full viewport height */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay content with proper scrolling */
+.overlay {
+  flex: 1; /* Pushes the footer down */
+  padding: 20px;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Scrollable Table */
+.table-container {
+  max-height: 400px; /* Set table height */
+  overflow-y: auto;  /* Enable vertical scroll */
+  margin-bottom: 20px; /* Space before footer */
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.th, .td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Footer */
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+.logout-btn{
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+  margin-left: 1000px;
+
+}

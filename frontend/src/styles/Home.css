@@ -1,0 +1,60 @@
+/* Container styling */
+.container {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(125, 192, 236, 0.7); /* Fallback color */
+  }
+  
+  /* Overlay with dark effect for better contrast */
+  .overlay {
+    background-color: rgba(10, 10, 10, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+  }
+  
+  /* Text container */
+  .text-container {
+    flex: 1; /* Pushes content up */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Link container */
+  .link-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  
+  /* Link list styling */
+  .link-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fallback color */
+  }

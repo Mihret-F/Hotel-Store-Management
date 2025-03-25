@@ -1,0 +1,60 @@
+/* General styling for the form container */
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #9ed6ec;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form header */
+.register-container h2 {
+  margin-bottom: 20px;
+  color: #1d1c1c;
+  
+}
+
+/* Input fields */
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: darkgrey;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Dropdown select */
+.register-container select {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+/* Submit button */
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #a3cdfa;
+  color: rgb(19, 18, 18);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #8db9e7;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

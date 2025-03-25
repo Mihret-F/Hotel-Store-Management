@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(13, 13, 14);
+  color: rgb(10, 10, 10);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(13, 13, 14);
+}
