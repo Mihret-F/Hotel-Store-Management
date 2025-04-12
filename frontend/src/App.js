@@ -17,7 +17,9 @@ import { ItemProvider } from "./context/ItemContext";
 import Contact from "./component/Contact";
 import "./App.css";
 import Login from "./component/Login";
-
+import AdminDashboard from "./component/AdminDashboard"; // Import the AdminDashboard component
+import AddUser from "./component/AddUser";
+import UpdateUser from "./component/UpdateUser"; // Import the UpdateUser component
 function App() {
   return (
     <ItemProvider> {/* ✅ Wraps the entire app with state management */}
@@ -29,6 +31,9 @@ function App() {
           <Route path="/food-beverage" element={<FoodBeverage />} />
           <Route path="/manager" element={<Manager />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard/>} />
+          <Route path="/UpdateUser/:userId" element={<UpdateUser />} /> 
+          <Route path="/add-user" element={<AddUser/>}/>
           <Route path="/bars" element={<Bars />} />
           <Route path="/bar" element={<Bar />} />
           <Route path="/storeissue" element={<StoreIssue />} />

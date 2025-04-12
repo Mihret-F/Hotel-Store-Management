@@ -1,0 +1,115 @@
+/* General layout */
+.update-user-container {
+    background-color: #2a2a2a;
+    color: #f8f8f8;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  
+  /* Style for the logout button container */
+  .logout-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Logout button styles */
+  .logout-button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Heading style */
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Form container */
+  form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styles */
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  /* Input field styles */
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  /* Submit button */
+  .update-button {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .update-button:active {
+    background-color: #1c598d;
+  }
+  
+  /* Loading spinner */
+  .loading {
+    font-size: 24px;
+    color: #3498db;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

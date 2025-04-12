@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Use useNavigate instead of useHistory
 import bgImage from "../Assert/fbs.jpg"; // Import background image
 
 export default function Admin() {
@@ -9,15 +10,8 @@ export default function Admin() {
   const [adminError, setAdminError] = useState("");
   const [token, setToken] = useState("");
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [newUsername, setNewUsername] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [role, setRole] = useState("Storekeeper");
-  const [registrationSuccess, setRegistrationSuccess] = useState(false);
-  const [registrationError, setRegistrationError] = useState("");
-
   const API_URL = "http://localhost:5000/api";
+  const navigate = useNavigate();  // Use useNavigate for navigation
 
   // Handle Admin Login
   const handleAdminLogin = async (e) => {
@@ -31,32 +25,11 @@ export default function Admin() {
       setToken(response.data.token);
       setIsAdminAuthenticated(true);
       setAdminError("");
+
+      // Redirect to admin dashboard after successful login
+      navigate("/admin-dashboard");  // Navigate to the admin dashboard page
     } catch (error) {
       setAdminError("Invalid admin credentials!");
-    }
-  };
-
-  // Handle New User Registration
-  const handleRegisterUser = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post(
-        `${API_URL}/users/register`,
-        { firstName, lastName, username: newUsername, password: newPassword, role },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-
-      setRegistrationSuccess(true);
-      setRegistrationError("");
-
-      // Reset form
-      setFirstName("");
-      setLastName("");
-      setNewUsername("");
-      setNewPassword("");
-      setRole("Storekeeper");
-    } catch (error) {
-      setRegistrationError(error.response?.data?.message || "Registration failed!");
     }
   };
 
@@ -68,30 +41,31 @@ export default function Admin() {
             <h1>Admin Login</h1>
             {adminError && <p style={{ color: "red" }}>{adminError}</p>}
             <form onSubmit={handleAdminLogin}>
-              <input type="text" placeholder="Admin Username" value={adminUsername} onChange={(e) => setAdminUsername(e.target.value)} required style={styles.input} />
-              <input type="password" placeholder="Admin Password" value={adminPassword} onChange={(e) => setAdminPassword(e.target.value)} required style={styles.input} />
+              <input
+                type="text"
+                placeholder="Admin Username"
+                value={adminUsername}
+                onChange={(e) => setAdminUsername(e.target.value)}
+                required
+                style={styles.input}
+              />
+              <input
+                type="password"
+                placeholder="Admin Password"
+                value={adminPassword}
+                onChange={(e) => setAdminPassword(e.target.value)}
+                required
+                style={styles.input}
+              />
               <button type="submit" style={styles.button}>Login</button>
             </form>
           </div>
         ) : (
+          // Show a success message after authentication (though this won't be shown if redirection happens)
           <div style={styles.authBox}>
-            <h1>Register New User</h1>
-            {registrationSuccess && <p style={{ color: "lightgreen" }}>User registered successfully!</p>}
-            {registrationError && <p style={{ color: "red" }}>{registrationError}</p>}
-            <form onSubmit={handleRegisterUser}>
-              <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required style={styles.input} />
-              <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required style={styles.input} />
-              <input type="text" placeholder="Username" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} required style={styles.input} />
-              <input type="password" placeholder="Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required style={styles.input} />
-              <select value={role} onChange={(e) => setRole(e.target.value)} required style={styles.input}>
-                <option value="Storekeeper">Storekeeper</option>
-                <option value="Manager">Manager</option>
-                <option value="FoodBeverage">Food & Beverage</option>
-                <option value="Barman">Barman</option>
-                <option value="Kitchen">Kitchen</option>
-              </select>
-              <button type="submit" style={styles.button}>Register User</button>
-            </form>
+            <h1>Welcome, Admin!</h1>
+            <p>Successfully logged in.</p>
+            {/* You can redirect or show additional admin features here */}
           </div>
         )}
       </div>
@@ -142,4 +116,4 @@ const styles = {
     borderRadius: "5px",
     width: "100%",
   },
-}; 
+};

@@ -66,11 +66,16 @@ exports.login = async (req, res) => {
 
 
 // Get all users
+// Update getUsers to support ?role=admin
 exports.getUsers = async (req, res) => {
     try {
-        const users = await User.find().select("-password");
-        res.json(users);
+      const role = req.query.role;
+      const query = role ? { role } : {};
+  
+      const users = await User.find(query).select("-password");
+      res.json(users);
     } catch (error) {
-        res.status(500).json({ error: error.message });
+      res.status(500).json({ error: error.message });
     }
-};
+  };
+  
